@@ -7,11 +7,12 @@ public class Data : MonoBehaviour
 {
     //References
     public GameObject nodePrefabRef;
-    
+    SpriteRenderer t;
     //Variables
     public static Node[,] nodes;
+    public Node highlightedNode;
 
-	void Awake ()
+    void Awake()
     {
         Stream inStream = new FileStream(Application.dataPath + "/Maps/map01.txt", FileMode.Open);
         StreamReader reader = new StreamReader(inStream);
@@ -36,9 +37,11 @@ public class Data : MonoBehaviour
             for(int x = 0; x < nodes.GetLength(0); x++)
             {
                 // for the first one (0,) spawn a node
-                nodes[x, y] = Instantiate<GameObject>(nodePrefabRef).GetComponent<Node>();
+                nodes[x, y] = Instantiate(nodePrefabRef).GetComponent<Node>();
                 // initialize it, and give the data of the 3 numbers
                 nodes[x, y].Initialize(
+                    x,
+                    y,
                     int.Parse(splitLine[x][0].ToString()),
                     int.Parse(splitLine[x][1].ToString()),
                     int.Parse(splitLine[x][2].ToString()));
@@ -48,8 +51,10 @@ public class Data : MonoBehaviour
 	
 	void Update ()
     {
-		
+
 	}
+
+    
 }
 
 
