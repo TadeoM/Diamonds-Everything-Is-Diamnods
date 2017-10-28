@@ -63,5 +63,5 @@ public class Data : MonoBehaviour
 abc
 a : Matirial Type (wood, tile, carpet, etc)
 b : Wall Type (none, left, right, both)
-c : Initial Units
+c : Initial Units (none, 
 */
