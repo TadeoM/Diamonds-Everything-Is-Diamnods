@@ -8,6 +8,7 @@ public class Node : MonoBehaviour
     public Unit unitOccupyingSpace;
     public int texture;
     public int movementRequirement; //If -1, tile is impassible
+    public Sprite tileSprite;
 	
 	void Start ()
     {
