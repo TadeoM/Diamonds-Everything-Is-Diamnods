@@ -10,7 +10,6 @@ public class LogicManager : MonoBehaviour
 
 	void Start ()
     {
-        nodes = new Node[10, 10];
 	}
 	
 	
