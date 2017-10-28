@@ -1,14 +1,14 @@
 fileFormatVersion: 2
-guid: 4b5f78bf9ca8f27488883be61f489df4
-timeCreated: 1509229542
+guid: 135b260150155cf4da305ba3d0bac37f
+timeCreated: 1509232190
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
-    21300000: character-spritesheet_0
-    21300002: character-spritesheet_1
-    21300004: character-spritesheet_2
-    21300006: character-spritesheet_3
-    21300008: character-spritesheet_4
+    21300000: fireman-spritesheet_0
+    21300002: fireman-spritesheet_1
+    21300004: fireman-spritesheet_2
+    21300006: fireman-spritesheet_3
+    21300008: fireman-spritesheet_4
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -75,65 +75,65 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: character-spritesheet_0
+      name: fireman-spritesheet_0
       rect:
         serializedVersion: 2
-        x: 3
-        y: 3
-        width: 26
-        height: 59
+        x: 0
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character-spritesheet_1
+      name: fireman-spritesheet_1
       rect:
         serializedVersion: 2
-        x: 45
-        y: 2
-        width: 31
-        height: 61
+        x: 64
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character-spritesheet_2
+      name: fireman-spritesheet_2
       rect:
         serializedVersion: 2
-        x: 92
-        y: 2
-        width: 31
-        height: 61
+        x: 128
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character-spritesheet_3
+      name: fireman-spritesheet_3
       rect:
         serializedVersion: 2
-        x: 139
-        y: 3
-        width: 32
-        height: 60
+        x: 192
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: character-spritesheet_4
+      name: fireman-spritesheet_4
       rect:
         serializedVersion: 2
-        x: 187
-        y: 3
-        width: 32
-        height: 60
+        x: 256
+        y: 0
+        width: 64
+        height: 64
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
