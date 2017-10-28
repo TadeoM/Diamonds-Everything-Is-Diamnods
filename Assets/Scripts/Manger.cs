@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Manger : MonoBehaviour
 {
+    bool friendlyturn = false;
     public static GameObject turnUnit;
     public static GameObject[] prefabs;
     public static List<GameObject> allUnits = new List<GameObject>();
