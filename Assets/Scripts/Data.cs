@@ -14,6 +14,24 @@ public class Data : MonoBehaviour
         StreamReader reader = new StreamReader(inStream);
 
         Debug.Log(reader.ReadLine());
+        Debug.Log(reader.ReadLine());
+
+        string line;
+        string[] splitLine;
+
+        while (true)
+        {
+            line = reader.ReadLine();
+
+            if (line == null) { break; }
+
+            splitLine = line.Split(' ');
+
+            foreach(string cell in splitLine)
+            {
+                
+            }
+        }
 	}
 	
 	void Update ()
@@ -21,3 +39,12 @@ public class Data : MonoBehaviour
 		
 	}
 }
+
+
+
+/*FORMAT
+abc
+a : Matirial Type (wood, tile, carpet, etc)
+b : Wall Type (none, left, right, both)
+c : Initial Units
+*/
