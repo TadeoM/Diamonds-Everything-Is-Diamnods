@@ -11,7 +11,7 @@ public class Data : MonoBehaviour
     //Variables
     public static Node[,] nodes;
 
-	void Start ()
+	void Awake ()
     {
         Stream inStream = new FileStream(Application.dataPath + "/Maps/map01.txt", FileMode.Open);
         StreamReader reader = new StreamReader(inStream);
