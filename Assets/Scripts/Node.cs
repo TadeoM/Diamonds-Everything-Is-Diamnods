@@ -7,8 +7,8 @@ public class Node : MonoBehaviour
 
     public Unit unitOccupyingSpace;
     public int material;
-    public int wall; 
-    public int movementRequirement; //If -1, tile is impassible
+    public int wall;
+    public int movementRequirement;     //If -1, tile is impassible
     public Sprite tileSprite;
 	
 	void Start ()
@@ -22,9 +22,8 @@ public class Node : MonoBehaviour
 
 	}
 
-    public Node Initialize(int material, int wall, int unit)
+    public Node Initialize(int matirial, int wall, int unit)
     {
-
         return this;
     }
 }
