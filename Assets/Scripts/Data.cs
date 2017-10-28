@@ -36,6 +36,9 @@ public class Data : MonoBehaviour
             // go through x index
             for(int x = 0; x < nodes.GetLength(0); x++)
             {
+                Debug.Log("X lengths: " + nodes.GetLength(0));
+                Debug.Log("Y lengths: " + nodes.GetLength(1));
+                Debug.Log("x: " + x + " y: " + y);
                 // for the first one (0,) spawn a node
                 nodes[x, y] = Instantiate(nodePrefabRef).GetComponent<Node>();
                 // initialize it, and give the data of the 3 numbers
@@ -46,6 +49,9 @@ public class Data : MonoBehaviour
                     int.Parse(splitLine[x][1].ToString()),
                     int.Parse(splitLine[x][2].ToString()));
             }
+
+            Camera.main.orthographicSize = nodes.GetLength(0) * .75f;
+            Camera.main.transform.position = new Vector3 (nodes.GetLength(0) - 1, Camera.main.transform.position.y, Camera.main.transform.position.z);
         }
 	}
 	
