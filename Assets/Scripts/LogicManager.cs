@@ -6,6 +6,7 @@ public class LogicManager : MonoBehaviour
 {
     //References
     public Node[,] nodes;
+    
 
 
 	void Start ()
