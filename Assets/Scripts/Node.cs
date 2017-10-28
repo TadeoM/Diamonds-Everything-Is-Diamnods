@@ -12,9 +12,8 @@ public class Node : MonoBehaviour
     public int movementRequirement;
     public SpriteRenderer spriteRenderer;
 	
-	void Start ()
+	void Awake ()
     {
-
          spriteRenderer = gameObject.GetComponent<SpriteRenderer>();
 	}
 	

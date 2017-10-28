@@ -4,14 +4,17 @@ using UnityEngine;
 
 public class RenderManager : MonoBehaviour {
 
-    Sprite[] spriteSheet;
+    public static Sprite[] spriteSheet;
     Sprite tileSprite;
 
 	// Use this for initialization
-	void Start () {
-
-        PositionNodes();
+	void Awake () {
+        //spriteSheet = new Sprite[4];
+        spriteSheet = Resources.LoadAll<Sprite>("Sprites/Tiles");
+        Debug.Log(spriteSheet.Length);
+        Invoke("PositionNodes", .01f);
         
+
     }
 	
 	// Update is called once per frame

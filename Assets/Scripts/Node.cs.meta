@@ -1,13 +1,13 @@
 fileFormatVersion: 2
 guid: 1cbe397f9b286f94585d763389e4ce68
-timeCreated: 1509162117
+timeCreated: 1509220393
 licenseType: Pro
 MonoImporter:
   serializedVersion: 2
   defaultReferences:
   - unitOccupyingSpace: {instanceID: 0}
   - tileSprite: {fileID: 21300160, guid: c848bf6c55acce140b2a783630f2c5fb, type: 3}
-  executionOrder: 0
+  executionOrder: -200
   icon: {instanceID: 0}
   userData: 
   assetBundleName: 

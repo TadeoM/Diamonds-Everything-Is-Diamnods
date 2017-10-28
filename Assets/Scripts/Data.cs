@@ -7,7 +7,7 @@ public class Data : MonoBehaviour
 {
     //References
     public GameObject nodePrefabRef;
-    SpriteRenderer t;
+
     //Variables
     public static Node[,] nodes;
     public Node highlightedNode;
