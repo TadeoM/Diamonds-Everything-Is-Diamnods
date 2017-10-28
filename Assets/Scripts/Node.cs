@@ -6,9 +6,9 @@ public class Node : MonoBehaviour
 {
 
     public Unit unitOccupyingSpace;
-    public int matirial;
-    public int wall; 
-    public int movementRequirement; //If -1, tile is impassible
+    public int material;
+    public int wall;
+    public int movementRequirement;     //If -1, tile is impassible
     public Sprite tileSprite;
 	
 	void Start ()

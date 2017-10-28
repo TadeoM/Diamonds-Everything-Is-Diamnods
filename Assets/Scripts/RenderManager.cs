@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class RenderManager : MonoBehaviour {
 
-    Node[,] nodes;
     Sprite[] spriteSheet;
 
 	// Use this for initialization
@@ -12,21 +11,13 @@ public class RenderManager : MonoBehaviour {
 
         spriteSheet = Resources.LoadAll<Sprite>("Sprites");
 
-        nodes = new Node[3, 3];
-
         // loop through the array of nodes and apply the correct texture
-        for (int x = 0; x < nodes.GetLength(0); x++)
+        for (int x = 0; x < Data.nodes.GetLength(0); x++)
         {
             Debug.Log(x);
-            for (int y = 0; y < nodes.GetLength(1); y++)
+            for (int y = 0; y < Data.nodes.GetLength(1); y++)
             {
-                Debug.Log(y);
-                Debug.Log(nodes.GetLength(0));
-                //nodes[x, y] = nodes[x, y].gameObject.AddComponent("Node");
-
-                // trying to go into the assets folder and find sprites, then into the spritesheet
-
-                nodes[x, y].tileSprite = spriteSheet[2];
+                Data.nodes[x,y].tileSprite = spriteSheet[]
             }
         }
     }
