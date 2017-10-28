@@ -5,9 +5,9 @@ using UnityEngine;
 public class Node : MonoBehaviour
 {
 
-    //public Unit unitOccupyingSpace;
+    public Unit unitOccupyingSpace;
     public int texture;
-    public int movementRequirement;
+    public int movementRequirement; //If -1, tile is impassible
 	
 	void Start ()
     {

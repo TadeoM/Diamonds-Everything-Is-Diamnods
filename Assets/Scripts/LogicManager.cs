@@ -5,10 +5,7 @@ using UnityEngine;
 public class LogicManager : MonoBehaviour
 {
     //References
-
-
-    //Variables
-    public Node[,] nodes;
+    
 
 
 	void Start ()
