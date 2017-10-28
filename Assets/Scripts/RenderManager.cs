@@ -10,21 +10,28 @@ public class RenderManager : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 
-        spriteSheet = Resources.LoadAll<Sprite>("Sprites/Tiles");
-        //Debug.Log(spriteSheet.Length);
-
-        // loop through the array of nodes and apply the correct texture
-        for (int x = 0; x < Data.nodes.GetLength(0); x++)
-        {
-            for (int y = 0; y < Data.nodes.GetLength(1); y++)
-            {
-                
-            }
-        }
+        PositionNodes();
+        
     }
 	
 	// Update is called once per frame
 	void Update () {
 		
 	}
+
+
+    /// <summary>
+    /// move nodes to correct position
+    /// </summary>
+    void PositionNodes()
+    {
+        for (int x = 0; x < Data.nodes.GetLength(0); x++)
+        {
+            for (int y = 0; y < Data.nodes.GetLength(1); y++)
+            {
+                Data.nodes[x, y].positionInWorld.x = x*1f;
+                Data.nodes[x, y].positionInWorld.y = y*-0.5f;
+            }
+        }
+    }
 }
