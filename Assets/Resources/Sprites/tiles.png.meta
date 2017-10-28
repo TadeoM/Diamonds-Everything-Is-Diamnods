@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: c848bf6c55acce140b2a783630f2c5fb
-timeCreated: 1509151188
+timeCreated: 1509161974
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -84,6 +84,86 @@ TextureImporter:
     21300154: iso-64x64-building_77
     21300156: iso-64x64-building_78
     21300158: iso-64x64-building_79
+    21300160: tiles_0
+    21300162: tiles_1
+    21300164: tiles_2
+    21300166: tiles_3
+    21300168: tiles_4
+    21300170: tiles_5
+    21300172: tiles_6
+    21300174: tiles_7
+    21300176: tiles_8
+    21300178: tiles_9
+    21300180: tiles_10
+    21300182: tiles_11
+    21300184: tiles_12
+    21300186: tiles_13
+    21300188: tiles_14
+    21300190: tiles_15
+    21300192: tiles_16
+    21300194: tiles_17
+    21300196: tiles_18
+    21300198: tiles_19
+    21300200: tiles_20
+    21300202: tiles_21
+    21300204: tiles_22
+    21300206: tiles_23
+    21300208: tiles_24
+    21300210: tiles_25
+    21300212: tiles_26
+    21300214: tiles_27
+    21300216: tiles_28
+    21300218: tiles_29
+    21300220: tiles_30
+    21300222: tiles_31
+    21300224: tiles_32
+    21300226: tiles_33
+    21300228: tiles_34
+    21300230: tiles_35
+    21300232: tiles_36
+    21300234: tiles_37
+    21300236: tiles_38
+    21300238: tiles_39
+    21300240: tiles_40
+    21300242: tiles_41
+    21300244: tiles_42
+    21300246: tiles_43
+    21300248: tiles_44
+    21300250: tiles_45
+    21300252: tiles_46
+    21300254: tiles_47
+    21300256: tiles_48
+    21300258: tiles_49
+    21300260: tiles_50
+    21300262: tiles_51
+    21300264: tiles_52
+    21300266: tiles_53
+    21300268: tiles_54
+    21300270: tiles_55
+    21300272: tiles_56
+    21300274: tiles_57
+    21300276: tiles_58
+    21300278: tiles_59
+    21300280: tiles_60
+    21300282: tiles_61
+    21300284: tiles_62
+    21300286: tiles_63
+    21300288: tiles_64
+    21300290: tiles_65
+    21300292: tiles_66
+    21300294: tiles_67
+    21300296: tiles_68
+    21300298: tiles_69
+    21300300: tiles_70
+    21300302: tiles_71
+    21300304: tiles_72
+    21300306: tiles_73
+    21300308: tiles_74
+    21300310: tiles_75
+    21300312: tiles_76
+    21300314: tiles_77
+    21300316: tiles_78
+    21300318: tiles_79
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -150,7 +230,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: iso-64x64-building_0
+      name: tiles_0
       rect:
         serializedVersion: 2
         x: 0
@@ -163,7 +243,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_1
+      name: tiles_1
       rect:
         serializedVersion: 2
         x: 64
@@ -176,7 +256,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_2
+      name: tiles_2
       rect:
         serializedVersion: 2
         x: 128
@@ -189,7 +269,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_3
+      name: tiles_3
       rect:
         serializedVersion: 2
         x: 192
@@ -202,7 +282,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_4
+      name: tiles_4
       rect:
         serializedVersion: 2
         x: 256
@@ -215,7 +295,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_5
+      name: tiles_5
       rect:
         serializedVersion: 2
         x: 320
@@ -228,7 +308,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_6
+      name: tiles_6
       rect:
         serializedVersion: 2
         x: 384
@@ -241,7 +321,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_7
+      name: tiles_7
       rect:
         serializedVersion: 2
         x: 448
@@ -254,7 +334,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_8
+      name: tiles_8
       rect:
         serializedVersion: 2
         x: 512
@@ -267,7 +347,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_9
+      name: tiles_9
       rect:
         serializedVersion: 2
         x: 576
@@ -280,7 +360,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_10
+      name: tiles_10
       rect:
         serializedVersion: 2
         x: 0
@@ -293,7 +373,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_11
+      name: tiles_11
       rect:
         serializedVersion: 2
         x: 64
@@ -306,7 +386,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_12
+      name: tiles_12
       rect:
         serializedVersion: 2
         x: 128
@@ -319,7 +399,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_13
+      name: tiles_13
       rect:
         serializedVersion: 2
         x: 192
@@ -332,7 +412,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_14
+      name: tiles_14
       rect:
         serializedVersion: 2
         x: 256
@@ -345,7 +425,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_15
+      name: tiles_15
       rect:
         serializedVersion: 2
         x: 320
@@ -358,7 +438,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_16
+      name: tiles_16
       rect:
         serializedVersion: 2
         x: 384
@@ -371,7 +451,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_17
+      name: tiles_17
       rect:
         serializedVersion: 2
         x: 448
@@ -384,7 +464,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_18
+      name: tiles_18
       rect:
         serializedVersion: 2
         x: 512
@@ -397,7 +477,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_19
+      name: tiles_19
       rect:
         serializedVersion: 2
         x: 576
@@ -410,7 +490,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_20
+      name: tiles_20
       rect:
         serializedVersion: 2
         x: 0
@@ -423,7 +503,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_21
+      name: tiles_21
       rect:
         serializedVersion: 2
         x: 64
@@ -436,7 +516,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_22
+      name: tiles_22
       rect:
         serializedVersion: 2
         x: 128
@@ -449,7 +529,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_23
+      name: tiles_23
       rect:
         serializedVersion: 2
         x: 192
@@ -462,7 +542,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_24
+      name: tiles_24
       rect:
         serializedVersion: 2
         x: 256
@@ -475,7 +555,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_25
+      name: tiles_25
       rect:
         serializedVersion: 2
         x: 320
@@ -488,7 +568,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_26
+      name: tiles_26
       rect:
         serializedVersion: 2
         x: 384
@@ -501,7 +581,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_27
+      name: tiles_27
       rect:
         serializedVersion: 2
         x: 448
@@ -514,7 +594,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_28
+      name: tiles_28
       rect:
         serializedVersion: 2
         x: 512
@@ -527,7 +607,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_29
+      name: tiles_29
       rect:
         serializedVersion: 2
         x: 576
@@ -540,7 +620,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_30
+      name: tiles_30
       rect:
         serializedVersion: 2
         x: 0
@@ -553,7 +633,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_31
+      name: tiles_31
       rect:
         serializedVersion: 2
         x: 64
@@ -566,7 +646,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_32
+      name: tiles_32
       rect:
         serializedVersion: 2
         x: 128
@@ -579,7 +659,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_33
+      name: tiles_33
       rect:
         serializedVersion: 2
         x: 192
@@ -592,7 +672,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_34
+      name: tiles_34
       rect:
         serializedVersion: 2
         x: 256
@@ -605,7 +685,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_35
+      name: tiles_35
       rect:
         serializedVersion: 2
         x: 320
@@ -618,7 +698,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_36
+      name: tiles_36
       rect:
         serializedVersion: 2
         x: 384
@@ -631,7 +711,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_37
+      name: tiles_37
       rect:
         serializedVersion: 2
         x: 448
@@ -644,7 +724,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_38
+      name: tiles_38
       rect:
         serializedVersion: 2
         x: 512
@@ -657,7 +737,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_39
+      name: tiles_39
       rect:
         serializedVersion: 2
         x: 576
@@ -670,7 +750,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_40
+      name: tiles_40
       rect:
         serializedVersion: 2
         x: 0
@@ -683,7 +763,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_41
+      name: tiles_41
       rect:
         serializedVersion: 2
         x: 64
@@ -696,7 +776,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_42
+      name: tiles_42
       rect:
         serializedVersion: 2
         x: 128
@@ -709,7 +789,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_43
+      name: tiles_43
       rect:
         serializedVersion: 2
         x: 192
@@ -722,7 +802,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_44
+      name: tiles_44
       rect:
         serializedVersion: 2
         x: 256
@@ -735,7 +815,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_45
+      name: tiles_45
       rect:
         serializedVersion: 2
         x: 320
@@ -748,7 +828,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_46
+      name: tiles_46
       rect:
         serializedVersion: 2
         x: 384
@@ -761,7 +841,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_47
+      name: tiles_47
       rect:
         serializedVersion: 2
         x: 448
@@ -774,7 +854,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_48
+      name: tiles_48
       rect:
         serializedVersion: 2
         x: 512
@@ -787,7 +867,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_49
+      name: tiles_49
       rect:
         serializedVersion: 2
         x: 576
@@ -800,7 +880,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_50
+      name: tiles_50
       rect:
         serializedVersion: 2
         x: 0
@@ -813,7 +893,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_51
+      name: tiles_51
       rect:
         serializedVersion: 2
         x: 64
@@ -826,7 +906,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_52
+      name: tiles_52
       rect:
         serializedVersion: 2
         x: 128
@@ -839,7 +919,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_53
+      name: tiles_53
       rect:
         serializedVersion: 2
         x: 192
@@ -852,7 +932,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_54
+      name: tiles_54
       rect:
         serializedVersion: 2
         x: 256
@@ -865,7 +945,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_55
+      name: tiles_55
       rect:
         serializedVersion: 2
         x: 320
@@ -878,7 +958,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_56
+      name: tiles_56
       rect:
         serializedVersion: 2
         x: 384
@@ -891,7 +971,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_57
+      name: tiles_57
       rect:
         serializedVersion: 2
         x: 448
@@ -904,7 +984,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_58
+      name: tiles_58
       rect:
         serializedVersion: 2
         x: 512
@@ -917,7 +997,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_59
+      name: tiles_59
       rect:
         serializedVersion: 2
         x: 576
@@ -930,7 +1010,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_60
+      name: tiles_60
       rect:
         serializedVersion: 2
         x: 0
@@ -943,7 +1023,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_61
+      name: tiles_61
       rect:
         serializedVersion: 2
         x: 64
@@ -956,7 +1036,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_62
+      name: tiles_62
       rect:
         serializedVersion: 2
         x: 128
@@ -969,7 +1049,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_63
+      name: tiles_63
       rect:
         serializedVersion: 2
         x: 192
@@ -982,7 +1062,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_64
+      name: tiles_64
       rect:
         serializedVersion: 2
         x: 256
@@ -995,7 +1075,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_65
+      name: tiles_65
       rect:
         serializedVersion: 2
         x: 320
@@ -1008,7 +1088,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_66
+      name: tiles_66
       rect:
         serializedVersion: 2
         x: 384
@@ -1021,7 +1101,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_67
+      name: tiles_67
       rect:
         serializedVersion: 2
         x: 448
@@ -1034,7 +1114,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_68
+      name: tiles_68
       rect:
         serializedVersion: 2
         x: 512
@@ -1047,7 +1127,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_69
+      name: tiles_69
       rect:
         serializedVersion: 2
         x: 576
@@ -1060,7 +1140,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_70
+      name: tiles_70
       rect:
         serializedVersion: 2
         x: 0
@@ -1073,7 +1153,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_71
+      name: tiles_71
       rect:
         serializedVersion: 2
         x: 64
@@ -1086,7 +1166,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_72
+      name: tiles_72
       rect:
         serializedVersion: 2
         x: 128
@@ -1099,7 +1179,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_73
+      name: tiles_73
       rect:
         serializedVersion: 2
         x: 192
@@ -1112,7 +1192,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_74
+      name: tiles_74
       rect:
         serializedVersion: 2
         x: 256
@@ -1125,7 +1205,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_75
+      name: tiles_75
       rect:
         serializedVersion: 2
         x: 320
@@ -1138,7 +1218,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_76
+      name: tiles_76
       rect:
         serializedVersion: 2
         x: 384
@@ -1151,7 +1231,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_77
+      name: tiles_77
       rect:
         serializedVersion: 2
         x: 448
@@ -1164,7 +1244,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_78
+      name: tiles_78
       rect:
         serializedVersion: 2
         x: 512
@@ -1177,7 +1257,7 @@ TextureImporter:
       outline: []
       tessellationDetail: 0
     - serializedVersion: 2
-      name: iso-64x64-building_79
+      name: tiles_79
       rect:
         serializedVersion: 2
         x: 576
