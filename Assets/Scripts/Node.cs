@@ -28,7 +28,10 @@ public class Node : MonoBehaviour
     {
         xPositionInArray = x;
         yPositionInArray = y;
-        //spriteRenderer.sprite = RenderManager.spriteSheet[matirial + wall];
+        spriteRenderer.sprite = RenderManager.spriteSheet[matirial + wall];
+
+        //unitOccupyingSpace = GameManager.Spawn(unit).G
+
         return this;
     }
 
