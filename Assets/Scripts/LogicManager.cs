@@ -5,7 +5,7 @@ using UnityEngine;
 public class LogicManager : MonoBehaviour
 {
     //References
-    public Node[,] nodes;
+    //public Node[,] nodes;
     
 
 
