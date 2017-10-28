@@ -28,7 +28,7 @@ public class Node : MonoBehaviour
     {
         xPositionInArray = x;
         yPositionInArray = y;
-        spriteRenderer.sprite = RenderManager.spriteSheet[matirial + wall];
+        //spriteRenderer.sprite = RenderManager.spriteSheet[matirial + wall];
         return this;
     }
 
