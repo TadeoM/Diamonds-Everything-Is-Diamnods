@@ -29,8 +29,10 @@ public class RenderManager : MonoBehaviour {
         {
             for (int y = 0; y < Data.nodes.GetLength(1); y++)
             {
-                Data.nodes[x, y].positionInWorld.x = x*1f;
-                Data.nodes[x, y].positionInWorld.y = y*-0.5f;
+                float xPos = x;
+                float yPos = y;
+
+                Data.nodes[x, y].transform.position = new Vector2(xPos+yPos,-(yPos / 2f)+xPos/2f);
             }
         }
     }
