@@ -5,6 +5,7 @@ using UnityEngine;
 public class Unit : MonoBehaviour {
 
     // variables
+    public int[] arrayPosition = { 0, 0 };
     public GameObject turnMinion;//if turnminion == this.gameobject it is your turn
     public int health;
     public int movementSpeed;
