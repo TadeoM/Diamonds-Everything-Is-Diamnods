@@ -5,27 +5,40 @@ using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
-    public static GameObject turnUnit;
+    //References
     public GameObject[] Prefabs;
-    public static List<GameObject> allUnits = new List<GameObject>();
+    public static List<GameObject> fireFighterUnits = new List<GameObject>();
+    public static List<GameObject> fireUnits = new List<GameObject>();
+    public Image pannelRef;
 
-    public static Node setActiveNode;
+    //Node Storage
     private Node activeNode;
+    public static Node setActiveNode;
     public static Node mouseoverNode;
     public static List<Node> highlightedNodes;
 
+    //Enum for labeling a node
     public enum NodeType { empty, fireFighter, fire }
     public NodeType activeNodeType;
-    public Text text;
 
+    //UI References
+    public List<Image> UIPannels = new List<Image>();
+    public List<Text> UItexts = new List<Text>();
+
+    //Pulser Variables
     public static float pulser;
     private float pulserTimer;
-    
+
+    //Enemy Turn Variables
+    private bool playerTurn;
+    private int enemyTimer;
 
     void Awake()
     {
         highlightedNodes = new List<Node>();
         activeNodeType = NodeType.empty;
+
+        PopulateUI();
     }
 
     void Update()
@@ -34,20 +47,26 @@ public class Manager : MonoBehaviour
         pulser = Mathf.Sin(pulserTimer) / 2 + .5f;
 
 
+        ResettleHomelessFires();
+
+
         //Determines behavior when another tile is CLICKED and active tile is FireFighter
         if( activeNode != setActiveNode && activeNodeType == NodeType.fireFighter )
         {
             switch (GetNodeType(setActiveNode))
             {
                 case NodeType.empty:
-                    if(activeNode.unitOccupyingSpace.Movements.Count > 0) { return; }
-                    activeNode.unitOccupyingSpace.Move(highlightedNodes);
-                    setActiveNode.unitOccupyingSpace = activeNode.unitOccupyingSpace;
-                    activeNode.unitOccupyingSpace = null;
+                    if (activeNode.unitOccupyingSpace.Movements.Count > 0) { return; }
+                    if (activeNode.unitOccupyingSpace.Move(highlightedNodes))
+                    {
+                        setActiveNode.unitOccupyingSpace = activeNode.unitOccupyingSpace;
+                        activeNode.unitOccupyingSpace = null;
+                    }
 
                     break;
 
                 case NodeType.fireFighter:
+
                     break;
 
                 case NodeType.fire:
@@ -66,7 +85,7 @@ public class Manager : MonoBehaviour
         {
             case NodeType.empty:
 
-                highlightedNodes.Clear();
+                Baseline();//highlightedNodes.Clear();
 
                 break;
 
@@ -84,19 +103,18 @@ public class Manager : MonoBehaviour
                                 mouseoverNode.xPositionInArray,
                                 mouseoverNode.yPositionInArray)
                                 );
-
                         break;
 
                     case NodeType.fireFighter:
-                        highlightedNodes.Clear();
+                        Baseline();//highlightedNodes.Clear();
                         mouseoverNode.gameObject.GetComponent<SpriteRenderer>().color = new Color(pulser, 1, pulser);
 
-                        //Highlighted Fireman GUI
+                        
 
                         break;
 
                     case NodeType.fire:
-                        highlightedNodes.Clear();
+                        Baseline();//highlightedNodes.Clear();
                         mouseoverNode.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, pulser, pulser);
 
                         //Chance to extinguish GUI
@@ -105,15 +123,13 @@ public class Manager : MonoBehaviour
                 }
 
                 activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-                SetText(null);
 
                 break;
 
             case NodeType.fire:
 
                 activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-                highlightedNodes.Clear();
-                SetText(null);
+                Baseline();//highlightedNodes.Clear();
 
                 break;
         }
@@ -131,7 +147,6 @@ public class Manager : MonoBehaviour
     private void Baseline()
     {
         highlightedNodes.Clear();
-
     }
 
     private NodeType GetNodeType(Node node)
@@ -160,6 +175,72 @@ public class Manager : MonoBehaviour
         }
     }
 
+    public void EndTurn()
+    {
+        foreach (GameObject ff in fireFighterUnits)
+        {
+            ff.GetComponent<Unit>().ResetMovement();
+        }
+        foreach (GameObject f in fireUnits)
+        {
+            FireMinion fire = f.GetComponent<FireMinion>();
+            Vector3 minMagVector = new Vector3(999, 999);
+
+            foreach (GameObject ff in fireFighterUnits)
+            {
+                FireFighters fireFighter = ff.GetComponent<FireFighters>();
+
+                Vector3 difference = (
+                    new Vector3(
+                        fireFighter.arrayPosition[0], 
+                        fireFighter.arrayPosition[1]) - 
+                    new Vector3(
+                        fire.arrayPosition[0],
+                        fire.arrayPosition[1])
+                        );
+
+                if (minMagVector.sqrMagnitude > difference.sqrMagnitude)
+                {
+                    minMagVector = difference;
+                }
+            }
+
+            Vector2 origionalPos = new Vector2(fire.arrayPosition[0], fire.arrayPosition[1]);
+            Vector2 desiredPos = new Vector2(origionalPos.x + minMagVector.x, origionalPos.y + minMagVector.y);
+
+            fire.Move(fire.GetPath(origionalPos, desiredPos));
+
+            fire.ResetMovement();
+        }
+
+    }
+
+    private void ResettleHomelessFires()
+    {
+        foreach (GameObject f in fireUnits)
+        {
+            FireMinion fire = f.GetComponent<FireMinion>();
+           
+            if (Data.nodes[fire.arrayPosition[0], fire.arrayPosition[1]].unitOccupyingSpace == null)
+            {
+                Data.nodes[fire.arrayPosition[0], fire.arrayPosition[1]].unitOccupyingSpace = fire;
+            }
+        }
+    }
+
+    private void PopulateUI()
+    {
+        for (int i = 0; i < fireFighterUnits.Count; i++)
+        {
+            Instantiate(pannelRef).transform.position -= new Vector3(0, i * -100);
+        }
+    }
+
+    private void UpdateUI()
+    {
+
+    }
+
     public GameObject Spawn(int[] arrayposition,int identifier)
     {
         GameObject current = null;
@@ -168,7 +249,15 @@ public class Manager : MonoBehaviour
             current = Instantiate(Prefabs[identifier - 1], new Vector2(arrayposition[0] + arrayposition[1], (-(arrayposition[1] / 2f) + arrayposition[0] / 2f)), Quaternion.identity);
             current.GetComponent<Unit>().arrayPosition = arrayposition;
             current.GetComponent<SpriteRenderer>().sortingOrder = arrayposition[1] - arrayposition[0] + 32;
-            allUnits.Add(current);
+            switch (identifier)
+            {
+                case 1:
+                    fireFighterUnits.Add(current);
+                    break;
+                case 2:
+                    fireUnits.Add(current);
+                    break;
+            }
         }
         return current;
     }

@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Unit : MonoBehaviour
 {
-    
-    public int movementSpeed = 3;
+    public int baseMovement;
+    public int movementRemaining;
     public int[] arrayPosition = { 0, 0 };
     public int health;
 
@@ -14,8 +14,9 @@ public class Unit : MonoBehaviour
 
     public Queue<Vector3> Movements = new Queue<Vector3>();
 
-	void Start () {
-        
+	void Start ()
+    {
+        movementRemaining = baseMovement;
 	}
     
     void FixedUpdate()
@@ -26,10 +27,14 @@ public class Unit : MonoBehaviour
         }
     }
 
-    
-    public void Move(List<Node> path)
+    public void ResetMovement()
     {
-        if (path.Count < 2) { return; }
+        movementRemaining = baseMovement;
+    }
+
+    public bool Move(List<Node> path)
+    {
+        if (path.Count < 2) { return false; }
 
         Queue<Vector3> output = new Queue<Vector3>();
 
@@ -45,7 +50,14 @@ public class Unit : MonoBehaviour
             }
         }
 
+        movementRemaining -= path.Count - 1;
+
         Movements = output;
+
+        arrayPosition[0] = path[path.Count - 1].xPositionInArray;
+        arrayPosition[1] = path[path.Count - 1].yPositionInArray;
+
+        return true;
     }
 
     public void oldMove(List<Node> path)
@@ -100,7 +112,7 @@ public class Unit : MonoBehaviour
         }
 
 
-        while (path.Count > movementSpeed + 1)
+        while (path.Count > movementRemaining + 1)
         {
             path.RemoveAt(path.Count - 1);
         }

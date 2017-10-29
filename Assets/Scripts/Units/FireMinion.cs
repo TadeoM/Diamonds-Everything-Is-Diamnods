@@ -4,10 +4,8 @@ using UnityEngine;
 
 public class FireMinion : Unit
 {
-    
-	void Start ()
+    private void Update()
     {
-        movementSpeed = 2;
-        health = 1;
+        
     }
 }

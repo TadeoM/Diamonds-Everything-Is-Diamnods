@@ -6,12 +6,6 @@ public class FireFighters : Unit
 {
     public GameObject hadokenRef;
 
-	void Start ()
-    {
-        movementSpeed = 3;
-        health = 3;
-	}
-
     public void Fire(Vector3 target)
     {
         Vector3 direction = target - transform.position;

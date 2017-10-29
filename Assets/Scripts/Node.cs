@@ -51,8 +51,6 @@ public class Node : MonoBehaviour
                     unitOccupyingSpace.type = Unit.Type.fire;
                     break;
             }
-
-           
         }
         
 
