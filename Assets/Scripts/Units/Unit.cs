@@ -2,42 +2,31 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Unit : MonoBehaviour {
-
-    // variables
+public class Unit : MonoBehaviour
+{
+    
     public int movementSpeed = 3;
     public int[] arrayPosition = { 0, 0 };
     public int health;
-    private Vector3 movement;
-    public int Moving = 0;
-    private int framesTraveled=0;
 
     public enum Type { fireFighter, fire };
     public Type type;
-	// Use this for initialization
-    public Queue<Vector3> Movements=new Queue<Vector3>();
-    // Use this for initialization
+
+    public Queue<Vector3> Movements = new Queue<Vector3>();
+
 	void Start () {
-        movement = new Vector3();
         
 	}
     
-    
-    public void oldMove(List<Node> path)
+    void FixedUpdate()
     {
-        Queue<Vector3> output = new Queue<Vector3>();
-        foreach (var item in path)
+        if (Movements.Count > 0)
         {
-            Vector3 finalLocation = new Vector3(item.xPositionInArray + item.yPositionInArray, (-(item.yPositionInArray / 2f) + item.xPositionInArray / 2f));
-            Vector3 currpath = Vector3.MoveTowards(transform.position, finalLocation, (transform.position - finalLocation).magnitude / 20);
-            for (int i = 0; i < 20; i++)
-            {
-                output.Enqueue(currpath);
-            }
+            transform.position += Movements.Dequeue();
         }
-        Movements = output;
     }
 
+    
     public void Move(List<Node> path)
     {
         if (path.Count < 2) { return; }
@@ -59,23 +48,21 @@ public class Unit : MonoBehaviour {
         Movements = output;
     }
 
-
-    // Update is called once per frame
-    void FixedUpdate()
+    public void oldMove(List<Node> path)
     {
-        #region Movement
-
-
-        if (Movements.Count > 0)
+        Queue<Vector3> output = new Queue<Vector3>();
+        foreach (var item in path)
         {
-            transform.position += Movements.Dequeue();
+            Vector3 finalLocation = new Vector3(item.xPositionInArray + item.yPositionInArray, (-(item.yPositionInArray / 2f) + item.xPositionInArray / 2f));
+            Vector3 currpath = Vector3.MoveTowards(transform.position, finalLocation, (transform.position - finalLocation).magnitude / 20);
+            for (int i = 0; i < 20; i++)
+            {
+                output.Enqueue(currpath);
+            }
         }
-      
-       
-        
-        #endregion
+        Movements = output;
     }
-    
+
     public List<Node> GetPath(Vector2 currentPos, Vector2 desiredPos)
     {
         List<Node> path = new List<Node>();

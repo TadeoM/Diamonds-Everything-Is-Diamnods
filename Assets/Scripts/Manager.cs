@@ -17,6 +17,9 @@ public class Manager : MonoBehaviour
     public enum NodeType { empty, fireFighter, fire }
     public NodeType activeNodeType;
     public Text text;
+
+    public static float pulser;
+    private float pulserTimer;
     
 
     void Awake()
@@ -27,6 +30,11 @@ public class Manager : MonoBehaviour
 
     void Update()
     {
+        pulserTimer += .1f;
+        pulser = Mathf.Sin(pulserTimer) / 2 + .5f;
+
+
+        //Determines behavior when another tile is CLICKED and active tile is FireFighter
         if( activeNode != setActiveNode && activeNodeType == NodeType.fireFighter )
         {
             switch (GetNodeType(setActiveNode))
@@ -43,6 +51,7 @@ public class Manager : MonoBehaviour
                     break;
 
                 case NodeType.fire:
+                    //Fire
                     break;
             }
         }
@@ -52,6 +61,7 @@ public class Manager : MonoBehaviour
 
         activeNodeType = GetNodeType(activeNode);
 
+        //Determines passive behavior of the active tile
         switch (activeNodeType)
         {
             case NodeType.empty:
@@ -62,18 +72,38 @@ public class Manager : MonoBehaviour
 
             case NodeType.fireFighter:
 
-                if (mouseoverNode != null)
+                switch (GetNodeType(mouseoverNode))
                 {
-                    highlightedNodes = activeNode.unitOccupyingSpace.GetComponent<FireFighters>().GetPath(
-                        new Vector2(
-                            activeNode.xPositionInArray,
-                            activeNode.yPositionInArray
-                            ),
-                        new Vector2(
-                            mouseoverNode.xPositionInArray,
-                            mouseoverNode.yPositionInArray)
-                            );
+                    case NodeType.empty:
+                        highlightedNodes = activeNode.unitOccupyingSpace.GetComponent<FireFighters>().GetPath(
+                            new Vector2(
+                                activeNode.xPositionInArray,
+                                activeNode.yPositionInArray
+                                ),
+                            new Vector2(
+                                mouseoverNode.xPositionInArray,
+                                mouseoverNode.yPositionInArray)
+                                );
+
+                        break;
+
+                    case NodeType.fireFighter:
+                        highlightedNodes.Clear();
+                        mouseoverNode.gameObject.GetComponent<SpriteRenderer>().color = new Color(pulser, 1, pulser);
+
+                        //Highlighted Fireman GUI
+
+                        break;
+
+                    case NodeType.fire:
+                        highlightedNodes.Clear();
+                        mouseoverNode.gameObject.GetComponent<SpriteRenderer>().color = new Color(1, pulser, pulser);
+
+                        //Chance to extinguish GUI
+
+                        break;
                 }
+
                 activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
                 SetText(null);
 
@@ -97,6 +127,12 @@ public class Manager : MonoBehaviour
         }
     }
 
+
+    private void Baseline()
+    {
+        highlightedNodes.Clear();
+
+    }
 
     private NodeType GetNodeType(Node node)
     {

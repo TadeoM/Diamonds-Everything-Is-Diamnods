@@ -22,9 +22,9 @@ public class Node : MonoBehaviour
     {
         spriteRenderer.color =
             new Color(
-                spriteRenderer.color.r + 10,
-                spriteRenderer.color.g + 10,
-                spriteRenderer.color.b + 10);
+                spriteRenderer.color.r + 1,
+                spriteRenderer.color.g + 1,
+                spriteRenderer.color.b + 1);
 	}
 
     public Node Initialize(int x, int y, int matirial, int wall, int unit)
