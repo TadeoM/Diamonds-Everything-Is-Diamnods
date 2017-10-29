@@ -5,6 +5,7 @@ using UnityEngine;
 public class Unit : MonoBehaviour {
 
     // variables
+    public int movementSpeed = 3;
     public int[] arrayPosition = { 0, 0 };
     public int health;
     private Vector3 movement;
