@@ -41,9 +41,9 @@ public class Node : MonoBehaviour
         spriteRenderer.sprite = RenderManager.spriteSheet[matirial + wall];
         if (unit > 0 && unit < 3)
         {
-            managerRef.Spawn(new int[] { x, y }, unit);
+            unitOccupyingSpace = managerRef.Spawn(new int[] { x, y }, unit).GetComponent<Unit>();
         }
-        //unitOccupyingSpace = GameManager.Spawn(unit).G
+        
 
         return this;
     }
