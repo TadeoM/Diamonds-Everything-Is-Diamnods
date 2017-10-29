@@ -15,7 +15,6 @@ public class FireFighters : Unit {
     // Update is called once per frame
     void Update()
     {
-        CheckDead();
         CheckInputs();
     }
     

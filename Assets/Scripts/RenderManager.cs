@@ -11,7 +11,6 @@ public class RenderManager : MonoBehaviour {
 	void Awake () {
         //spriteSheet = new Sprite[4];
         spriteSheet = Resources.LoadAll<Sprite>("Sprites/Tiles");
-        Debug.Log(spriteSheet.Length);
         Invoke("PositionNodes", .01f);
         
 

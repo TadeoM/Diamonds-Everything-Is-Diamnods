@@ -61,24 +61,21 @@ public class Node : MonoBehaviour
 
     private void OnMouseDown()
     {
-        if (Manager.activeNode != this)
+        if (Manager.setActiveNode != this)
         {
             Debug.Log(xPositionInArray + ", " + yPositionInArray + " selected");
-            Manager.activeNode = this;
+            Manager.setActiveNode = this;
         }
         else
         {
             Debug.Log(xPositionInArray + ", " + yPositionInArray + " deselected");
-            Manager.activeNode = null;
+            Manager.setActiveNode = null;
         }
     }
 
     private void OnMouseEnter()
     {
         Manager.mouseoverNode = this;
-    }
-    private void OnMouseExit()
-    {
-        //Manager.highlightedNodes.Remove(this);
+        Debug.Log(xPositionInArray + ", " + yPositionInArray);
     }
 }

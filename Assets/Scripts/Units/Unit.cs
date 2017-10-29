@@ -15,7 +15,7 @@ public class Unit : MonoBehaviour {
     public enum Type { fireFighter, fire };
     public Type type;
 	// Use this for initialization
-    Queue<Vector3> Movements=new Queue<Vector3>();
+    public Queue<Vector3> Movements=new Queue<Vector3>();
     // Use this for initialization
 	void Start () {
         movement = new Vector3();
@@ -23,7 +23,7 @@ public class Unit : MonoBehaviour {
 	}
     
     
-    public Queue<Vector3> Move(List<Node> path)
+    public void oldMove(List<Node> path)
     {
         Queue<Vector3> output = new Queue<Vector3>();
         foreach (var item in path)
@@ -35,15 +35,38 @@ public class Unit : MonoBehaviour {
                 output.Enqueue(currpath);
             }
         }
-        return output;
+        Movements = output;
     }
+
+    public void Move(List<Node> path)
+    {
+        if (path.Count < 2) { return; }
+
+        Queue<Vector3> output = new Queue<Vector3>();
+
+        for (int i = 1; i < path.Count; i++)
+        {
+            Vector3 pathStep = 
+                path[i].transform.position - 
+                path[i - 1].transform.position;
+
+            for (float j = 0; j < 20; j++)
+            {
+                output.Enqueue(pathStep * .05f);
+            }
+        }
+
+        Movements = output;
+    }
+
+
     // Update is called once per frame
     void FixedUpdate()
     {
         #region Movement
 
 
-        if (Movements.Count>0)
+        if (Movements.Count > 0)
         {
             transform.position += Movements.Dequeue();
         }
@@ -51,25 +74,14 @@ public class Unit : MonoBehaviour {
        
         
         #endregion
-
     }
-
-    public void CheckDead()
-    {
-        if (health <= 0)
-        {
-            // die
-        }
-    }
-
+    
     public List<Node> GetPath(Vector2 currentPos, Vector2 desiredPos)
     {
         List<Node> path = new List<Node>();
-        //Data.nodes[(int)currentPos.x, (int)currentPos.y];
 
         Vector2 distance = desiredPos - currentPos;
-        //Data.nodes[(int)currentPos.x+1, (int)currentPos.y].unitOccupyingSpace = Data.nodes[(int)currentPos.x, (int)currentPos.y].unitOccupyingSpace;
-        //Debug.Log(distance.x + " " + distance.y);
+        
         if (distance.x > 0)
         {
             for (int x = 0; x < distance.x; x++)
@@ -89,14 +101,14 @@ public class Unit : MonoBehaviour {
         {
             for (int y = 0; y <= distance.y; y++)
             {
-                path.Add(Data.nodes[(int)distance.x, (int)currentPos.y + y]);
+                path.Add(Data.nodes[(int)desiredPos.x, (int)currentPos.y + y]);
             }
         }
         else
         {
             for (int y = 0; y >= distance.y; y--)
             {
-                path.Add(Data.nodes[(int)distance.x, (int)currentPos.y + y]);
+                path.Add(Data.nodes[(int)desiredPos.x, (int)currentPos.y + y]);
             }
         }
 
@@ -108,10 +120,9 @@ public class Unit : MonoBehaviour {
 
         foreach (Node item in path)
         {
-            Debug.Log(item.xPositionInArray + ", " + item.yPositionInArray);
+            //Debug.Log(item.xPositionInArray + ", " + item.yPositionInArray);
         }
-
-
-        return null;
+        
+        return path;
     }
 }

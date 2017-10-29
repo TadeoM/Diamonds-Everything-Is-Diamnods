@@ -9,7 +9,8 @@ public class Manager : MonoBehaviour
     public GameObject[] Prefabs;
     public static List<GameObject> allUnits = new List<GameObject>();
 
-    public static Node activeNode;
+    public static Node setActiveNode;
+    private Node activeNode;
     public static Node mouseoverNode;
     public static List<Node> highlightedNodes;
 
@@ -26,41 +27,44 @@ public class Manager : MonoBehaviour
 
     void Update()
     {
-        if (activeNode != null)
+        if( activeNode != setActiveNode && activeNodeType == NodeType.fireFighter )
         {
-            if (activeNode.unitOccupyingSpace == null)
+            switch (GetNodeType(setActiveNode))
             {
-                activeNodeType = NodeType.empty;
-            }
-            else
-            {
-                if (activeNode.unitOccupyingSpace.type == Unit.Type.fireFighter)
-                {
-                    activeNodeType = NodeType.fireFighter;
-                }
-                else
-                {
-                    activeNodeType = NodeType.fire;
-                }
+                case NodeType.empty:
+                    if(activeNode.unitOccupyingSpace.Movements.Count > 0) { return; }
+                    activeNode.unitOccupyingSpace.Move(highlightedNodes);
+                    setActiveNode.unitOccupyingSpace = activeNode.unitOccupyingSpace;
+                    activeNode.unitOccupyingSpace = null;
+
+                    break;
+
+                case NodeType.fireFighter:
+                    break;
+
+                case NodeType.fire:
+                    break;
             }
         }
-        else
-        {
-            activeNodeType = NodeType.empty;
-        }
+
+        activeNode = setActiveNode;
+
+
+        activeNodeType = GetNodeType(activeNode);
 
         switch (activeNodeType)
         {
             case NodeType.empty:
+
+                highlightedNodes.Clear();
+
                 break;
 
             case NodeType.fireFighter:
 
                 if (mouseoverNode != null)
                 {
-                    FireFighters ff = activeNode.gameObject.GetComponent<FireFighters>();
-
-                    ff.GetPath(
+                    highlightedNodes = activeNode.unitOccupyingSpace.GetComponent<FireFighters>().GetPath(
                         new Vector2(
                             activeNode.xPositionInArray,
                             activeNode.yPositionInArray
@@ -70,18 +74,15 @@ public class Manager : MonoBehaviour
                             mouseoverNode.yPositionInArray)
                             );
                 }
-                
-                        
                 activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-
-                //highlightedNodes = activeNode.GetPath()
-                //activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
                 SetText(null);
+
                 break;
 
             case NodeType.fire:
 
                 activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                highlightedNodes.Clear();
                 SetText(null);
 
                 break;
@@ -91,10 +92,37 @@ public class Manager : MonoBehaviour
 
         foreach (Node n in highlightedNodes)
         {
-            n.gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
+            if (n == activeNode) { continue; }
+            n.gameObject.GetComponent<SpriteRenderer>().color = Color.cyan;
         }
     }
 
+
+    private NodeType GetNodeType(Node node)
+    {
+        if (node != null)
+        {
+            if (node.unitOccupyingSpace == null)
+            {
+                return NodeType.empty;
+            }
+            else
+            {
+                if (node.unitOccupyingSpace.type == Unit.Type.fireFighter)
+                {
+                    return NodeType.fireFighter;
+                }
+                else
+                {
+                    return NodeType.fire;
+                }
+            }
+        }
+        else
+        {
+            return NodeType.empty;
+        }
+    }
 
     public GameObject Spawn(int[] arrayposition,int identifier)
     {
@@ -112,8 +140,8 @@ public class Manager : MonoBehaviour
     void SetText(Sprite spriteHead)
     {
         string health = activeNode.unitOccupyingSpace.health.ToString();
-        int dewIt = activeNode.unitOccupyingSpace.movementSpeed - activeNode.unitOccupyingSpace.moved;
-        string movementLeft = dewIt.ToString();
-        text.text = "Health: " + health + "\nMove Left: " + movementLeft;
+        //int dewIt = activeNode.unitOccupyingSpace.movementSpeed - activeNode.unitOccupyingSpace.moved;
+        //string movementLeft = dewIt.ToString();
+        //text.text = "Health: " + health + "\nMove Left: " + movementLeft;
     }
 }
