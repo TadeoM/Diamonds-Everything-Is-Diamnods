@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Manager : MonoBehaviour
 {
@@ -14,6 +15,7 @@ public class Manager : MonoBehaviour
 
     public enum NodeType { empty, fireFighter, fire }
     public NodeType activeNodeType;
+    public Text text;
     
 
     void Awake()
@@ -50,7 +52,6 @@ public class Manager : MonoBehaviour
         switch (activeNodeType)
         {
             case NodeType.empty:
-
                 break;
 
             case NodeType.fireFighter:
@@ -73,11 +74,15 @@ public class Manager : MonoBehaviour
                         
                 activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
 
+                //highlightedNodes = activeNode.GetPath()
+                //activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+                SetText(null);
                 break;
 
             case NodeType.fire:
 
                 activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+                SetText(null);
 
                 break;
         }
@@ -102,5 +107,13 @@ public class Manager : MonoBehaviour
             allUnits.Add(current);
         }
         return current;
+    }
+
+    void SetText(Sprite spriteHead)
+    {
+        string health = activeNode.unitOccupyingSpace.health.ToString();
+        int dewIt = activeNode.unitOccupyingSpace.movementSpeed - activeNode.unitOccupyingSpace.moved;
+        string movementLeft = dewIt.ToString();
+        text.text = "Health: " + health + "\nMove Left: " + movementLeft;
     }
 }
