@@ -8,6 +8,7 @@ public class Unit : MonoBehaviour {
     public int[] arrayPosition = { 0, 0 };
     public int health;
     public int movementSpeed;
+    public int moved;
     private bool prevMove;
     private Vector3 movement;
     public int Moving = 0;
