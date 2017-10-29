@@ -41,6 +41,18 @@ public class Node : MonoBehaviour
         if (unit > 0 && unit < 3)
         {
             unitOccupyingSpace = managerRef.Spawn(new int[] { x, y }, unit).GetComponent<Unit>();
+
+            switch (unit)
+            {
+                case 1:
+                    unitOccupyingSpace.type = Unit.Type.fireFighter;
+                    break;
+                case 2:
+                    unitOccupyingSpace.type = Unit.Type.fire;
+                    break;
+            }
+
+           
         }
         
 
@@ -61,4 +73,12 @@ public class Node : MonoBehaviour
         }
     }
 
+    private void OnMouseEnter()
+    {
+        Manager.mouseoverNode = this;
+    }
+    private void OnMouseExit()
+    {
+        //Manager.highlightedNodes.Remove(this);
+    }
 }

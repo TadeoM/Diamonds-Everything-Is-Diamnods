@@ -1,0 +1,49 @@
+Mono path[0] = 'D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Standalone_Data/Managed'
+Mono path[1] = 'D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Standalone_Data/Mono'
+Mono config path = 'D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Standalone_Data/Mono/etc'
+PlayerConnection initialized from D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Standalone_Data (debug = 0)
+PlayerConnection initialized network socket : 0.0.0.0 55012
+Multi-casting "[IP] 129.21.28.65 [Port] 55012 [Flags] 2 [Guid] 2180605413 [EditorId] 1962108347 [Version] 1048832 [Id] WindowsPlayer(IGM2435-03) [Debug] 0" to [225.0.0.222:54997]...
+Started listening to [0.0.0.0:55012]
+PlayerConnection already initialized - listening to [0.0.0.0:55012]
+Player data archive not found at `D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Standalone_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.0f3 (497a0f351392)
+GfxDevice: creating device client; threaded=1
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.0]
+    Renderer: NVIDIA GeForce GTX 680 (ID=0x1180)
+    Vendor:   NVIDIA
+    VRAM:     2017 MB
+    Driver:   22.21.13.8476
+Begin MonoManager ReloadAssembly
+Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.018 seconds
+Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+<RI> Initializing input.
+<RI> Input initialized.
+<RI> Initialized touch support.
+UnloadTime: 2.024961 ms
+4
+UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
+UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
+UnityEngine.Logger:Log(LogType, Object)
+UnityEngine.Debug:Log(Object)
+RenderManager:Awake() (at D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Assets\Scripts\RenderManager.cs:14)
+ 
+(Filename: D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Assets/Scripts/RenderManager.cs Line: 14)
+
+Setting up 4 worker threads for Enlighten.
+  Thread -> id: 6d40 -> priority: 1 
+  Thread -> id: 5d28 -> priority: 1 
+  Thread -> id: 4d18 -> priority: 1 
+  Thread -> id: 5c48 -> priority: 1 

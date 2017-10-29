@@ -10,6 +10,10 @@ public class Unit : MonoBehaviour {
     private Vector3 movement;
     public int Moving = 0;
     private int framesTraveled=0;
+
+    public enum Type { fireFighter, fire };
+    public Type type;
+	// Use this for initialization
     Queue<Vector3> Movements=new Queue<Vector3>();
     // Use this for initialization
 	void Start () {
