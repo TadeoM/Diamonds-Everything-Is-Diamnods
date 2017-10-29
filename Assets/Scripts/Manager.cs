@@ -55,7 +55,22 @@ public class Manager : MonoBehaviour
 
             case NodeType.fireFighter:
 
-                //highlightedNodes = activeNode.GetComponent<Unit>().GetPath()
+                if (mouseoverNode != null)
+                {
+                    FireFighters ff = activeNode.gameObject.GetComponent<FireFighters>();
+
+                    ff.GetPath(
+                        new Vector2(
+                            activeNode.xPositionInArray,
+                            activeNode.yPositionInArray
+                            ),
+                        new Vector2(
+                            mouseoverNode.xPositionInArray,
+                            mouseoverNode.yPositionInArray)
+                            );
+                }
+                
+                        
                 activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
 
                 break;
