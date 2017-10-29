@@ -55,7 +55,7 @@ public class Manager : MonoBehaviour
 
             case NodeType.fireFighter:
 
-                highlightedNodes = activeNode.GetPath()
+                //highlightedNodes = activeNode.GetComponent<Unit>().GetPath()
                 activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
 
                 break;
