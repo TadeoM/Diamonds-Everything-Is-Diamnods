@@ -3,21 +3,30 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class FireFighters : Unit {
-
+    bool hovering=false;
     public GameObject gun;
-    
+    public bool selected = false;
 	// Use this for initialization
 	void Start () {
         movementSpeed = 3;
         health = 3;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update()
+    {
         CheckDead();
         CheckInputs();
-	}
-
+    }
+    
+    private void OnMouseOver()
+    {
+        if (Input.GetKey(KeyCode.Mouse0)) {
+            print("did it");
+            selected = true;
+        }
+        
+    }
     /// <summary>
     /// check for inputs
     /// </summary>

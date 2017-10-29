@@ -6,7 +6,7 @@ public class Node : MonoBehaviour
 {
     //References
     public Manager managerRef;
-
+    public bool selected = false;
     bool m_down=false;
     bool m_hover=false;
     public int xPositionInArray;
@@ -41,21 +41,16 @@ public class Node : MonoBehaviour
 
         return this;
     }
-    private void OnMouseEnter()
+    private void OnMouseOver()
     {
-        m_hover = true;
-    }
-    private void OnMouseExit()
-    {
-        m_hover = false;
+        if (Input.GetKey(KeyCode.Mouse0))
+        {
+            selected = true;
+        }
     }
     private void OnMouseDown()
     {
-        m_down = true;
-    }
-    private void OnMouseUp()
-    {
-        m_down = false;
+        Debug.Log(xPositionInArray + ", " + yPositionInArray);
     }
 
 }

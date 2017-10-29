@@ -6,40 +6,36 @@ public class Unit : MonoBehaviour {
 
     // variables
     public int[] arrayPosition = { 0, 0 };
-    public GameObject turnMinion;//if turnminion == this.gameobject it is your turn
     public int health;
     public int movementSpeed;
     private bool prevMove;
-    private Vector3 desiredWorldpos;
-    public bool Moving { get { return (desiredWorldpos != transform.position); } }
+    private Vector3 movement;
+    public int Moving = 0;
     private int framesTraveled=0;
 	// Use this for initialization
 	void Start () {
-        desiredWorldpos = transform.position;
-        prevMove = Moving;
+        movement = new Vector3();
+        
 	}
     public void Move(Vector3 finalpos)
     {
-        desiredWorldpos = finalpos;
+        Moving = 20;
+        movement = (finalpos - transform.position-new Vector3(0,0,2f))/20;
     }
     // Update is called once per frame
     void FixedUpdate()
     {
         #region Movement
+
+
+        if (Moving > 0)
+        {
+            transform.position += movement;
+            Moving--;
+        }
+      
        
-        Vector3 currentMovement = transform.position - desiredWorldpos;
-        currentMovement = currentMovement / (20-framesTraveled);
-        transform.position += currentMovement;
-        if (prevMove && !Moving)
-        {
-            movementSpeed--;
-        }
-        if (Moving)
-        {
-            framesTraveled++;
-        }
-        else { framesTraveled = 0; }
-        prevMove = Moving;
+        
         #endregion
 
     }
