@@ -4,16 +4,32 @@ using UnityEngine;
 
 public class Manager : MonoBehaviour
 {
-    bool friendlyturn = false;
     public static GameObject turnUnit;
     public GameObject[] Prefabs;
     public static List<GameObject> allUnits = new List<GameObject>();
+
+    public static Node activeNode;
+    public static List<Node> highlightedNodes;
     
-    // Use this for initialization
+
     void Awake()
     {
-        
+        highlightedNodes = new List<Node>();
     }
+
+    void Update()
+    {
+        if (activeNode != null)
+        {
+            activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+        }
+        foreach (Node n in highlightedNodes)
+        {
+            n.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
+        }
+    }
+
+
     public GameObject Spawn(int[] arrayposition,int identifier)
     {
         GameObject current = null;
@@ -26,11 +42,4 @@ public class Manager : MonoBehaviour
         }
         return current;
     }
-    // Update is called once per frame
-    void Update()
-    {
-
-    }
-
-
 }
