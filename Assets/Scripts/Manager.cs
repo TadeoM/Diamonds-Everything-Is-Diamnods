@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class Manager : MonoBehaviour
 {
@@ -11,6 +12,8 @@ public class Manager : MonoBehaviour
     public static List<GameObject> fireUnits = new List<GameObject>();
     public GameObject pannelRef;
     public Canvas canvasRef;
+    public GameObject gameOverRef;
+    public Text gameOverTextRef;
 
     //Node Storage
     private Node activeNode;
@@ -30,10 +33,6 @@ public class Manager : MonoBehaviour
     public static float pulser;
     private float pulserTimer;
 
-    //Enemy Turn Variables
-    private bool playerTurn;
-    private int enemyTimer;
-
 
     void Awake()
     {
@@ -47,6 +46,17 @@ public class Manager : MonoBehaviour
     {
         pulserTimer += .1f;
         pulser = Mathf.Sin(pulserTimer) / 2 + .5f;
+
+
+        if(fireFighterUnits.Count <= 0)
+        {
+            gameOverRef.active = true;
+        }
+        if(fireUnits.Count <= 0)
+        {
+            gameOverRef.active = true;
+            gameOverTextRef.text = "You Have Won!\nCongradulations!";
+        }
 
 
         ResettleHomelessFires();
@@ -73,17 +83,22 @@ public class Manager : MonoBehaviour
                     break;
 
                 case NodeType.fire:
-                    activeNode.unitOccupyingSpace.gameObject.GetComponent<FireFighters>().Fire(setActiveNode.transform.position);
-                    float hitDifficulty = (
-                        new Vector2(setActiveNode.xPositionInArray, setActiveNode.yPositionInArray) -
-                        new Vector2(activeNode.xPositionInArray, activeNode.yPositionInArray)
-                        ).magnitude * 25;
-
-                    Debug.Log(hitDifficulty);
-
-                    if (Random.Range(1, 100) > hitDifficulty)
+                    if (!activeNode.unitOccupyingSpace.gameObject.GetComponent<FireFighters>().fired)
                     {
-                        setActiveNode.unitOccupyingSpace.health--;
+                        activeNode.unitOccupyingSpace.gameObject.GetComponent<FireFighters>().Fire(setActiveNode.transform.position);
+                        float hitDifficulty = (
+                            new Vector2(setActiveNode.xPositionInArray, setActiveNode.yPositionInArray) -
+                            new Vector2(activeNode.xPositionInArray, activeNode.yPositionInArray)
+                            ).magnitude * 25;
+
+                        Debug.Log(hitDifficulty);
+
+                        if (Random.Range(1, 100) > hitDifficulty)
+                        {
+                            setActiveNode.unitOccupyingSpace.health--;
+                        }
+
+                        activeNode.unitOccupyingSpace.gameObject.GetComponent<FireFighters>().fired = true;
                     }
                     break;
             }
@@ -194,6 +209,7 @@ public class Manager : MonoBehaviour
         foreach (GameObject ff in fireFighterUnits)
         {
             ff.GetComponent<Unit>().ResetMovement();
+            ff.GetComponent<FireFighters>().fired = false;
         }
         foreach (GameObject f in fireUnits)
         {
@@ -267,7 +283,7 @@ public class Manager : MonoBehaviour
             UIPannels.Add(temp.GetComponent<Image>());
             UItexts.Add(temp.GetComponentInChildren<Text>());
 
-            temp.transform.position -= new Vector3(0, i * 77);
+            temp.transform.position -= new Vector3(0, i * 1.5f);
         }
     }
 
@@ -278,7 +294,14 @@ public class Manager : MonoBehaviour
             FireFighters fireFighter = fireFighterUnits[i].GetComponent<FireFighters>();
 
             UItexts[i].text = "Health: " + fireFighter.health + "\n" +
-                              "Movement: " + fireFighter.movementRemaining;
+                              "Movement: " + fireFighter.movementRemaining + "\n" +
+                              "Loaded: " + !fireFighter.fired;
+
+            while (fireFighterUnits.Count < UIPannels.Count)
+            {
+                Destroy(UIPannels[UIPannels.Count - 1].gameObject);
+                UIPannels.RemoveAt(UIPannels.Count - 1);
+            }
 
             if (activeNode != null)
             {
@@ -315,11 +338,8 @@ public class Manager : MonoBehaviour
         return current;
     }
 
-    void SetText(Sprite spriteHead)
+    public void Return()
     {
-        string health = activeNode.unitOccupyingSpace.health.ToString();
-        //int dewIt = activeNode.unitOccupyingSpace.movementSpeed - activeNode.unitOccupyingSpace.moved;
-        //string movementLeft = dewIt.ToString();
-        //text.text = "Health: " + health + "\nMove Left: " + movementLeft;
+        Application.Quit();
     }
 }

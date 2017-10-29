@@ -19,7 +19,7 @@ public class AnimatorScript : MonoBehaviour {
         framenum = 0;
         Anim = new List<Sprite>();
         Sprite[] s = Resources.LoadAll<Sprite>("Sprites/Characters/" + path);
-        for (int i = firstframe; i < firstframe+animlength&&i<s.Length; i++)
+        for (int i = firstframe; i < firstframe + animlength && i < s.Length; i++)
         {
             Anim.Add(s[i]);
         }

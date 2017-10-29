@@ -1,49 +1,398 @@
-Mono path[0] = 'D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Standalone_Data/Managed'
-Mono path[1] = 'D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Standalone_Data/Mono'
-Mono config path = 'D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Standalone_Data/Mono/etc'
-PlayerConnection initialized from D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Standalone_Data (debug = 0)
-PlayerConnection initialized network socket : 0.0.0.0 55012
-Multi-casting "[IP] 129.21.28.65 [Port] 55012 [Flags] 2 [Guid] 2180605413 [EditorId] 1962108347 [Version] 1048832 [Id] WindowsPlayer(IGM2435-03) [Debug] 0" to [225.0.0.222:54997]...
-Started listening to [0.0.0.0:55012]
-PlayerConnection already initialized - listening to [0.0.0.0:55012]
-Player data archive not found at `D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Standalone_Data/data.unity3d`, using local filesystemInitialize engine version: 5.6.0f3 (497a0f351392)
+Initialize engine version: 5.6.0f3 (497a0f351392)
 GfxDevice: creating device client; threaded=1
 Direct3D:
-    Version:  Direct3D 11.0 [level 11.0]
-    Renderer: NVIDIA GeForce GTX 680 (ID=0x1180)
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce GTX 1060 6GB (ID=0x1c03)
     Vendor:   NVIDIA
-    VRAM:     2017 MB
-    Driver:   22.21.13.8476
+    VRAM:     3072 MB
+    Driver:   22.21.13.8569
 Begin MonoManager ReloadAssembly
-Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
-Loading D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
-Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
-Loading D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
-- Completed reload, in  0.018 seconds
-Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\System.dll (this message is harmless)
-desktop: 1920x1080 60Hz; virtual: 3840x1080 at 0,0
+Platform assembly: C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+Platform assembly: C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Networking.dll (this message is harmless)
+Loading C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Networking.dll into Unity Child Domain
+Platform assembly: C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Analytics.dll (this message is harmless)
+Loading C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\UnityEngine.Analytics.dll into Unity Child Domain
+- Completed reload, in  0.017 seconds
+Platform assembly: C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: C:\Users\Jaklans\Source\Repos\Diamonds-Everything-Is-Diamnods\Standalone_Data\Managed\System.dll (this message is harmless)
+desktop: 1920x1080 60Hz; virtual: 3200x1080 at -1280,0
 <RI> Initializing input.
 <RI> Input initialized.
 <RI> Initialized touch support.
-UnloadTime: 2.024961 ms
-4
-UnityEngine.DebugLogHandler:Internal_Log(LogType, String, Object)
-UnityEngine.DebugLogHandler:LogFormat(LogType, Object, String, Object[])
-UnityEngine.Logger:Log(LogType, Object)
-UnityEngine.Debug:Log(Object)
-RenderManager:Awake() (at D:\Profiles\jxs2828\Source\Repos\Diamonds-Everything-Is-Diamnods\Assets\Scripts\RenderManager.cs:14)
+UnloadTime: 3.567981 ms
+Unloading 6 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 9.204032 ms
+
+Unloading 9 unused Assets to reduce memory usage. Loaded Objects now: 619.
+Total: 0.411504 ms (FindLiveObjects: 0.042184 ms CreateObjectMapping: 0.024933 ms MarkObjects: 0.315403 ms  DeleteObjects: 0.024374 ms)
+
+0, 4
  
-(Filename: D:/Profiles/jxs2828/Source/Repos/Diamonds-Everything-Is-Diamnods/Assets/Scripts/RenderManager.cs Line: 14)
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 4 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 5 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+35.35534
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+0, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+0, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+0, 5 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 5 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 5 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5, 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5, 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5, 0 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5, 1 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 1 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+0, 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+0, 0 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 0 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 0 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 0 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 0
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 0 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 1 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 1
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 2 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 3 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+35.35534
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5, 2
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+5, 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+4, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 5 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 4 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+25
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+3, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 5
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 4
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+1, 3 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 3
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
+
+2, 3 selected
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/DebugBindings.gen.cpp Line: 51)
 
 Setting up 4 worker threads for Enlighten.
-  Thread -> id: 6d40 -> priority: 1 
-  Thread -> id: 5d28 -> priority: 1 
-  Thread -> id: 4d18 -> priority: 1 
-  Thread -> id: 5c48 -> priority: 1 
+  Thread -> id: 103d4 -> priority: 1 
+  Thread -> id: cddc -> priority: 1 
+  Thread -> id: ff88 -> priority: 1 
+  Thread -> id: 1065c -> priority: 1 

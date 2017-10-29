@@ -12,9 +12,11 @@ public class Data : MonoBehaviour
     public static Node[,] nodes;
     public Node highlightedNode;
 
+    public static string map;
+
     void Awake()
     {
-        Stream inStream = new FileStream(Application.dataPath + "/Maps/map01.txt", FileMode.Open);
+        Stream inStream = new FileStream(Application.dataPath + "/Maps/" + map, FileMode.Open);
         StreamReader reader = new StreamReader(inStream);
 
         // reads first two lines and initializes array based on the two numbers
@@ -54,7 +56,18 @@ public class Data : MonoBehaviour
 	
 	void Update ()
     {
-
+        foreach (Node n in nodes)
+        {
+            if (n.unitOccupyingSpace != null)
+            {
+                if (n.unitOccupyingSpace.health < 1)
+                {
+                    Manager.fireFighterUnits.Remove(n.unitOccupyingSpace.gameObject);
+                    Manager.fireUnits.Remove(n.unitOccupyingSpace.gameObject);
+                    Destroy(n.unitOccupyingSpace.gameObject);
+                }
+            }
+        }
 	}
 
     

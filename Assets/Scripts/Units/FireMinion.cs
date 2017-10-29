@@ -4,7 +4,12 @@ using UnityEngine;
 
 public class FireMinion : Unit
 {
-    private void Update()
+    void Awake()
+    {
+        gameObject.GetComponent<AnimatorScript>().Animate("enemy-spritesheet", 0, 5);
+    }
+
+    void Update()
     {
         
     }
