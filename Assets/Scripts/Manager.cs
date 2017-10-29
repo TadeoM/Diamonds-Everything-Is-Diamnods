@@ -8,6 +8,7 @@ public class Manager : MonoBehaviour
     public static GameObject turnUnit;
     public GameObject[] Prefabs;
     public static List<GameObject> allUnits = new List<GameObject>();
+    int timesDone = 0;
     
     // Use this for initialization
     void Awake()
@@ -29,7 +30,17 @@ public class Manager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timesDone++;
+        if (timesDone == 60)
+        {
+            //Debug.Log(Data.nodes[i, j].unitOccupyingSpace.name);
+            Vector2 currentPos = new Vector2(0, 0);
+            Vector2 desiredPos = new Vector2(2, 3);
+            //Debug.Log(i + " " + j);
+            FireMinion script = Data.nodes[1, 4].unitOccupyingSpace.GetComponent<FireMinion>();
+            script.GetPath(currentPos, desiredPos);
 
+        }
     }
 
 
