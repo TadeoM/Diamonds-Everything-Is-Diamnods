@@ -30,12 +30,18 @@ public class Node : MonoBehaviour
 
     public Node Initialize(int x, int y, int matirial, int wall, int unit)
     {
+        if (matirial == 9)
+        {
+            Destroy(this.gameObject);
+            return null;
+        }
+
         xPositionInArray = x;
         yPositionInArray = y;
         spriteRenderer.sprite = RenderManager.spriteSheet[matirial + wall];
         if (unit > 0 && unit < 3)
         {
-            managerRef.Spawn(new int[] { x, y }, 1);
+            managerRef.Spawn(new int[] { x, y }, unit);
         }
         //unitOccupyingSpace = GameManager.Spawn(unit).G
 
