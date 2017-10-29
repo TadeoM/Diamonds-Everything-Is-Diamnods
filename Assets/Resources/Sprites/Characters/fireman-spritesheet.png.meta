@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: b08f33b900078934388a22379deb8543
-timeCreated: 1509231190
+timeCreated: 1509236249
 licenseType: Pro
 TextureImporter:
   fileIDToRecycleName:
@@ -9,6 +9,11 @@ TextureImporter:
     21300004: fireman-spritesheet_2
     21300006: fireman-spritesheet_3
     21300008: fireman-spritesheet_4
+    21300010: fireman-spritesheet_5
+    21300012: fireman-spritesheet_6
+    21300014: fireman-spritesheet_7
+    21300016: fireman-spritesheet_8
+    21300018: fireman-spritesheet_9
   serializedVersion: 4
   mipmaps:
     mipMapMode: 0
@@ -79,11 +84,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 0
-        y: 0
+        y: 1116
         width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -91,12 +96,12 @@ TextureImporter:
       name: fireman-spritesheet_1
       rect:
         serializedVersion: 2
-        x: 64
-        y: 0
+        x: 0
+        y: 992
         width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -104,12 +109,12 @@ TextureImporter:
       name: fireman-spritesheet_2
       rect:
         serializedVersion: 2
-        x: 128
-        y: 0
+        x: 0
+        y: 868
         width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -117,12 +122,12 @@ TextureImporter:
       name: fireman-spritesheet_3
       rect:
         serializedVersion: 2
-        x: 192
-        y: 0
+        x: 0
+        y: 744
         width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0
@@ -130,12 +135,77 @@ TextureImporter:
       name: fireman-spritesheet_4
       rect:
         serializedVersion: 2
-        x: 256
+        x: 0
+        y: 620
+        width: 64
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fireman-spritesheet_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 496
+        width: 64
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fireman-spritesheet_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 372
+        width: 64
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fireman-spritesheet_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 248
+        width: 64
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fireman-spritesheet_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 124
+        width: 64
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      tessellationDetail: 0
+    - serializedVersion: 2
+      name: fireman-spritesheet_9
+      rect:
+        serializedVersion: 2
+        x: 0
         y: 0
         width: 64
-        height: 64
-      alignment: 9
-      pivot: {x: 0.5, y: 0.05}
+        height: 124
+      alignment: 0
+      pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       tessellationDetail: 0

@@ -19,8 +19,9 @@ public class Manager : MonoBehaviour
         GameObject current = null;
         if (identifier > 0 && identifier <= 2)
         {
-            current = Instantiate(Prefabs[identifier - 1], new Vector2(arrayposition[0] + arrayposition[1], (-(arrayposition[1] / 2f) + arrayposition[0] / 2f) - .5f), Quaternion.identity);
+            current = Instantiate(Prefabs[identifier - 1], new Vector2(arrayposition[0] + arrayposition[1], (-(arrayposition[1] / 2f) + arrayposition[0] / 2f)), Quaternion.identity);
             current.GetComponent<Unit>().arrayPosition = arrayposition;
+            current.GetComponent<SpriteRenderer>().sortingOrder = arrayposition[1] - arrayposition[0] + 32;
             allUnits.Add(current);
         }
         return current;
