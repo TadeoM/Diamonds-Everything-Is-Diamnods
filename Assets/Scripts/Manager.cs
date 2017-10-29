@@ -9,23 +9,69 @@ public class Manager : MonoBehaviour
     public static List<GameObject> allUnits = new List<GameObject>();
 
     public static Node activeNode;
+    public static Node mouseoverNode;
     public static List<Node> highlightedNodes;
+
+    public enum NodeType { empty, fireFighter, fire }
+    public NodeType activeNodeType;
     
 
     void Awake()
     {
         highlightedNodes = new List<Node>();
+        activeNodeType = NodeType.empty;
     }
 
     void Update()
     {
         if (activeNode != null)
         {
-            activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+            if (activeNode.unitOccupyingSpace == null)
+            {
+                activeNodeType = NodeType.empty;
+            }
+            else
+            {
+                if (activeNode.unitOccupyingSpace.type == Unit.Type.fireFighter)
+                {
+                    activeNodeType = NodeType.fireFighter;
+                }
+                else
+                {
+                    activeNodeType = NodeType.fire;
+                }
+            }
         }
+        else
+        {
+            activeNodeType = NodeType.empty;
+        }
+
+        switch (activeNodeType)
+        {
+            case NodeType.empty:
+
+                break;
+
+            case NodeType.fireFighter:
+
+                highlightedNodes = activeNode.GetPath()
+                activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
+
+                break;
+
+            case NodeType.fire:
+
+                activeNode.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
+
+                break;
+        }
+
+
+
         foreach (Node n in highlightedNodes)
         {
-            n.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
+            n.gameObject.GetComponent<SpriteRenderer>().color = Color.yellow;
         }
     }
 
