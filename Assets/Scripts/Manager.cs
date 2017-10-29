@@ -51,7 +51,7 @@ public class Manager : MonoBehaviour
                     break;
 
                 case NodeType.fire:
-                    //Fire
+                    activeNode.unitOccupyingSpace.gameObject.GetComponent<FireFighters>().Fire(setActiveNode.transform.position);
                     break;
             }
         }
@@ -61,7 +61,7 @@ public class Manager : MonoBehaviour
 
         activeNodeType = GetNodeType(activeNode);
 
-        //Determines passive behavior of the active tile
+        //Determines PASSIVE behavior of the active tile
         switch (activeNodeType)
         {
             case NodeType.empty:
