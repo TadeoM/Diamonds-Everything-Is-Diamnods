@@ -34,6 +34,7 @@ public class Manager : MonoBehaviour
     private bool playerTurn;
     private int enemyTimer;
 
+
     void Awake()
     {
         highlightedNodes = new List<Node>();
@@ -73,6 +74,17 @@ public class Manager : MonoBehaviour
 
                 case NodeType.fire:
                     activeNode.unitOccupyingSpace.gameObject.GetComponent<FireFighters>().Fire(setActiveNode.transform.position);
+                    float hitDifficulty = (
+                        new Vector2(setActiveNode.xPositionInArray, setActiveNode.yPositionInArray) -
+                        new Vector2(activeNode.xPositionInArray, activeNode.yPositionInArray)
+                        ).magnitude * 25;
+
+                    Debug.Log(hitDifficulty);
+
+                    if (Random.Range(1, 100) > hitDifficulty)
+                    {
+                        setActiveNode.unitOccupyingSpace.health--;
+                    }
                     break;
             }
         }
