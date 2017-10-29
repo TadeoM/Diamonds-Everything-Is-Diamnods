@@ -34,8 +34,10 @@ public class RenderManager : MonoBehaviour {
             {
                 float xPos = x;
                 float yPos = y;
-
-                Data.nodes[x, y].transform.position = new Vector2(xPos+yPos,-(yPos / 2f)+xPos/2f);
+                if (Data.nodes[x, y] != null)
+                {
+                    Data.nodes[x, y].transform.position = new Vector2(xPos + yPos, -(yPos / 2f) + xPos / 2f);
+                }
             }
         }
     }
