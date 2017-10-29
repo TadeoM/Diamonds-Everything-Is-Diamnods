@@ -17,10 +17,14 @@ public class Unit : MonoBehaviour {
         movement = new Vector3();
         
 	}
-    public void Move(Vector3 finalpos)
+    
+  
+    public void Move(List<Node> path)
     {
-        Moving = 20;
-        movement = (finalpos - transform.position-new Vector3(0,0,2f))/20;
+        foreach (var item in path)
+        {
+           Vector2
+        }
     }
     // Update is called once per frame
     void FixedUpdate()
